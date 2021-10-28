@@ -1,0 +1,16 @@
+{
+  "name": "cache-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "./index.mjs"
+  },
+  "author": "Daniel Rice",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^10.4.0",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {}
+}
