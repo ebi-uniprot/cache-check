@@ -9,7 +9,7 @@ const PREFIX = "https://beta.uniprot.org/";
 
 const serverErrors = [];
 
-const gotoPage = async (page, url) => {
+const gotoUrl = async (page, url) => {
   console.log("--", url);
   await page
     .goto(url, {
@@ -59,7 +59,7 @@ page.on("console", (msg) => {
   }
 });
 
-await page.goto(PREFIX);
+await gotoUrl(page, PREFIX);
 
 const urlPaths = fs.readFileSync(PATHS_FILE).toString().split("\n");
 for (const urlPath of urlPaths) {
@@ -68,14 +68,14 @@ for (const urlPath of urlPaths) {
     await page.evaluate(() => {
       localStorage.setItem("view-mode", "0");
     });
-    await gotoPage(page, url);
+    await gotoUrl(page, url);
     await saveScreenshot(page, `${urlPath}-viewMode=table`);
     await page.evaluate(() => {
       localStorage.setItem("view-mode", "1");
     });
   }
-  await gotoPage(page, url);
-  await saveScreenshot(page, urlPath);
+  await gotoUrl(page, url);
+  // await saveScreenshot(page, urlPath);
 }
 
 await browser.close();
