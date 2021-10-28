@@ -1,5 +1,3 @@
-/uniprotkb?query=%20(hemoglobin)%20AND%20(reviewed:true)&facets=model_organism:9606&sort=id&dir=ascend
-/
 /help/explore_proteomes
 /blast
 /uniprotkb?query= (hemoglobin) AND (reviewed:true)&facets=model_organism:9606&sort=id&dir=ascend
