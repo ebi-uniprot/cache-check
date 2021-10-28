@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
-    "start": "./index.mjs"
+    "start": "./index.mjs paths.txt",
+    "warm": "./index.mjs cache-warmer.txt"
   },
   "author": "Daniel Rice",
   "license": "ISC",

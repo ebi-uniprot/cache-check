@@ -4,8 +4,10 @@ import * as fs from "fs";
 import * as path from "path";
 import urljoin from "url-join";
 
-const PATHS_FILE = "paths.txt";
 const PREFIX = "https://beta.uniprot.org/";
+
+// second argument sent to node indicates the input file of URLs
+const PATHS_FILE = process.argv[2];
 
 const serverErrors = [];
 
