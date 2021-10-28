@@ -62,6 +62,8 @@ https://beta.uniprot.org/uniprotkb?query=coronavirus
 https://beta.uniprot.org/uniprotkb?query=covid-19
 https://beta.uniprot.org/uniprotkb?query=covid%2019
 https://beta.uniprot.org/uniprotkb?query=reviewed%3Atrue
+https://beta.uniprot.org/uniprotkb?query=reviewed:false
+https://beta.uniprot.org/uniprotkb?query=reviewed:true
 https://beta.uniprot.org/uniref?facets=identity%3A0.5&query=%2A
 https://beta.uniprot.org/uniref?facets=identity%3A0.9&query=%2A
 https://beta.uniprot.org/uniref?facets=identity%3A1.0&query=%2A
