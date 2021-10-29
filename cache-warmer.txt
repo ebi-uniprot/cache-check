@@ -68,4 +68,3 @@ https://beta.uniprot.org/uniref?facets=identity%3A0.5&query=%2A
 https://beta.uniprot.org/uniref?facets=identity%3A0.9&query=%2A
 https://beta.uniprot.org/uniref?facets=identity%3A1.0&query=%2A
 https://beta.uniprot.org/uniref?query=*
-
