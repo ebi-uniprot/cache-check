@@ -2,7 +2,6 @@
 import puppeteer from "puppeteer";
 import * as fs from "fs";
 import * as path from "path";
-import urljoin from "url-join";
 
 const PREFIX = "https://beta.uniprot.org/";
 
@@ -33,7 +32,7 @@ const saveScreenshot = async (page, urlPath) => {
   await page.screenshot({
     path: path.join(
       "screenshots",
-      `${urlPath.substr(1).replace(/(\/+|\s+|\-+)/g, "_")}.png`
+      `${urlPath.replace(/(\/+|\s+|\-+)/g, "_")}.png`
     ),
   });
 };
@@ -61,17 +60,14 @@ page.on("console", (msg) => {
   }
 });
 
-await gotoUrl(page, PREFIX);
-
 const urlPaths = fs.readFileSync(PATHS_FILE).toString().split("\n");
-for (const urlPath of urlPaths) {
-  const url = urljoin(PREFIX, urlPath);
-  if (urlPath.includes("query=")) {
+for (const url of urlPaths) {
+  if (url.includes("query=")) {
     await page.evaluate(() => {
       localStorage.setItem("view-mode", "0");
     });
     await gotoUrl(page, url);
-    await saveScreenshot(page, `${urlPath}-viewMode=table`);
+    await saveScreenshot(page, `${url}-viewMode=table`);
     await page.evaluate(() => {
       localStorage.setItem("view-mode", "1");
     });
