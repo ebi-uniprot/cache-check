@@ -19,14 +19,8 @@ const gotoUrl = async (page, url) => {
     .catch((error) => {
       console.error(error);
     });
+  await page.waitForTimeout(10000);
 };
-
-// TODO: fix the scoping here
-// const setViewMode = async (page, mode) => {
-//   await page.evaluate(() => {
-//     localStorage.setItem("view-mode", mode);
-//   });
-// };
 
 const saveScreenshot = async (page, urlPath) => {
   await page.screenshot({
@@ -63,17 +57,19 @@ page.on("console", (msg) => {
 const urlPaths = fs.readFileSync(PATHS_FILE).toString().split("\n");
 for (const url of urlPaths) {
   if (url.includes("query=")) {
-    await page.evaluate(() => {
-      localStorage.setItem("view-mode", "0");
-    });
+    // Table view
+    const urlTable = `${url}&view=table`;
+    await gotoUrl(page, urlTable);
+    // await saveScreenshot(page, urlTable);
+
+    // Cards view
+    const urlCards = `${url}&view=cards`;
+    await gotoUrl(page, urlCards);
+    // await saveScreenshot(page, urlCards);
+  } else {
     await gotoUrl(page, url);
-    await saveScreenshot(page, `${url}-viewMode=table`);
-    await page.evaluate(() => {
-      localStorage.setItem("view-mode", "1");
-    });
+    // await saveScreenshot(page, url);
   }
-  await gotoUrl(page, url);
-  // await saveScreenshot(page, urlPath);
 }
 
 await browser.close();
