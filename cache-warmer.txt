@@ -1,10 +1,49 @@
+# ----
+# homepage
+# ----
 https://beta.uniprot.org/
-https://beta.uniprot.org/uniparc?facets=database_facet%3A1&query=%2A
-https://beta.uniprot.org/uniparc?facets=database_facet%3A2&query=%2A
-https://beta.uniprot.org/uniparc?facets=database_facet%3A3&query=%2A
-https://beta.uniprot.org/uniparc?facets=database_facet%3A4&query=%2A
-https://beta.uniprot.org/uniparc?facets=database_facet%3A5&query=%2A
-https://beta.uniprot.org/uniparc?query=*
+# ----
+# suggested search below main page search box
+# ----
+https://beta.uniprot.org/uniprotkb?query=Insulin
+https://beta.uniprot.org/uniprotkb?facets=reviewed%3Atrue&query=Insulin
+https://beta.uniprot.org/uniprotkb?facets=reviewed%3Afalse&query=Insulin
+https://beta.uniprot.org/uniprotkb?facets=model_organism%3A9606&query=Insulin
+https://beta.uniprot.org/uniprotkb?facets=model_organism%3A10090&query=Insulin
+https://beta.uniprot.org/uniprotkb?facets=existence%3A3&query=Insulin
+https://beta.uniprot.org/uniprotkb?facets=existence%3A3%2Clength%3A%5B201%20TO%20400%5D&query=Insulin
+https://beta.uniprot.org/uniprotkb?facets=existence%3A3%2Clength%3A%5B801%20TO%20%2A%5D&query=Insulin
+# ----
+# suggested search below main page search box
+# ----
+https://beta.uniprot.org/uniprotkb?query=APP
+https://beta.uniprot.org/uniprotkb?facets=reviewed%3Atrue&query=APP
+https://beta.uniprot.org/uniprotkb?facets=reviewed%3Afalse&query=APP
+https://beta.uniprot.org/uniprotkb?facets=existence%3A3&query=APP
+# ----
+# suggested search below main page search box
+# ----
+https://beta.uniprot.org/uniprotkb?query=Human
+https://beta.uniprot.org/uniprotkb?facets=reviewed%3Atrue&query=Human
+https://beta.uniprot.org/uniprotkb?facets=reviewed%3Afalse&query=Human
+https://beta.uniprot.org/uniprotkb?facets=model_organism%3A9606&query=Human
+https://beta.uniprot.org/uniprotkb?facets=model_organism%3A7955&query=Human
+https://beta.uniprot.org/uniprotkb?facets=existence%3A4&query=Human
+https://beta.uniprot.org/uniprotkb?facets=existence%3A4%2Clength%3A%5B1%20TO%20200%5D&query=Human
+https://beta.uniprot.org/uniprotkb?facets=length%3A%5B201%20TO%20400%5D&query=Human
+# ----
+# suggested search below main page search box
+# ----
+https://beta.uniprot.org/uniprotkb/P05067/entry
+# ----
+# suggested search below main page search box
+# ----
+https://beta.uniprot.org/uniprotkb?query=organism_id%3A9606
+https://beta.uniprot.org/uniprotkb?facets=reviewed%3Afalse&query=organism_id%3A9606
+https://beta.uniprot.org/uniprotkb?facets=reviewed%3Atrue&query=organism_id%3A9606
+# ----
+# star search and its facets being clicked
+# ----
 https://beta.uniprot.org/uniprotkb?facets=annotation_score%3A1&query=%2A
 https://beta.uniprot.org/uniprotkb?facets=annotation_score%3A2&query=%2A
 https://beta.uniprot.org/uniprotkb?facets=annotation_score%3A4&query=%2A
@@ -55,6 +94,9 @@ https://beta.uniprot.org/uniprotkb?facets=reviewed%3Atrue&query=%2A
 https://beta.uniprot.org/uniprotkb?facets=reviewed%3Atrue&query=brca2
 https://beta.uniprot.org/uniprotkb?facets=reviewed%3Atrue&query=reviewed%3Atrue
 https://beta.uniprot.org/uniprotkb?query=%2A
+# ----
+# common searches
+# ----
 https://beta.uniprot.org/uniprotkb?query=brca2
 https://beta.uniprot.org/uniprotkb?query=breast%20cancer
 https://beta.uniprot.org/uniprotkb?query=corona%20virus
@@ -64,7 +106,19 @@ https://beta.uniprot.org/uniprotkb?query=covid%2019
 https://beta.uniprot.org/uniprotkb?query=reviewed%3Atrue
 https://beta.uniprot.org/uniprotkb?query=reviewed:false
 https://beta.uniprot.org/uniprotkb?query=reviewed:true
+# ----
+# uniref star search and its facets being clicked
+# ----
 https://beta.uniprot.org/uniref?facets=identity%3A0.5&query=%2A
 https://beta.uniprot.org/uniref?facets=identity%3A0.9&query=%2A
 https://beta.uniprot.org/uniref?facets=identity%3A1.0&query=%2A
 https://beta.uniprot.org/uniref?query=*
+# ----
+# uniparc star search and its facets being clicked
+# ----
+https://beta.uniprot.org/uniparc?facets=database_facet%3A1&query=%2A
+https://beta.uniprot.org/uniparc?facets=database_facet%3A2&query=%2A
+https://beta.uniprot.org/uniparc?facets=database_facet%3A3&query=%2A
+https://beta.uniprot.org/uniparc?facets=database_facet%3A4&query=%2A
+https://beta.uniprot.org/uniparc?facets=database_facet%3A5&query=%2A
+https://beta.uniprot.org/uniparc?query=*

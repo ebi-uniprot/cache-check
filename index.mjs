@@ -14,12 +14,12 @@ const gotoUrl = async (page, url) => {
   console.log("--", url);
   await page
     .goto(url, {
+      timeout: 0, // no timeout when fetching the page -- we don't mind if it takes a long time, since it'll then be cached for future
       waitUntil: ["domcontentloaded", "networkidle0"],
     })
     .catch((error) => {
       console.error(error);
     });
-  await page.waitForTimeout(10000);
 };
 
 const saveScreenshot = async (page, urlPath) => {
@@ -54,21 +54,23 @@ page.on("console", (msg) => {
   }
 });
 
-const urlPaths = fs.readFileSync(PATHS_FILE).toString().split("\n");
+const urlPaths = fs.readFileSync(PATHS_FILE).toString().split("\n").filter(x => x);
 for (const url of urlPaths) {
-  if (url.includes("query=")) {
-    // Table view
-    const urlTable = `${url}&view=table`;
-    await gotoUrl(page, urlTable);
-    // await saveScreenshot(page, urlTable);
-
-    // Cards view
-    const urlCards = `${url}&view=cards`;
-    await gotoUrl(page, urlCards);
-    // await saveScreenshot(page, urlCards);
-  } else {
-    await gotoUrl(page, url);
-    // await saveScreenshot(page, url);
+  if (!url.startsWith("#")) {
+    if (url && url.includes("query=")) {
+      // Table view
+      const urlTable = `${url}&view=table`;
+      await gotoUrl(page, urlTable);
+      // await saveScreenshot(page, urlTable);
+  
+      // Cards view
+      const urlCards = `${url}&view=cards`;
+      await gotoUrl(page, urlCards);
+      // await saveScreenshot(page, urlCards);
+    } else {
+      await gotoUrl(page, url);
+      // await saveScreenshot(page, url);
+    }
   }
 }
 
